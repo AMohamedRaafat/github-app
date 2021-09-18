@@ -13,7 +13,7 @@ export default class App extends Component {
     loop: false,
     repos: [],
     show: true,
-    ref : "",
+    ref: "",
 
   }
   changeState = (e) => {
@@ -49,12 +49,13 @@ export default class App extends Component {
           show: !this.state.show,
           loop: !this.state.loop
         })
-        console.log(this.state.repos);
-        this.renderRepos();
       })
       .catch(err => {
-        document.body.innerHTML += "User Error ! ";
-        console.log("User Error ! ");
+        console.log("User Error !");
+        var ele = <div class="alert alert-danger" role="alert">
+          User Not Found        
+          </div>;
+        document.body.innerHTML += ele;
       })
 
   }
@@ -68,7 +69,7 @@ export default class App extends Component {
         </CnxtProvider>
 
         <div className='Data'>
-           
+
           {this.state.loop ? <User data={this.state.data} get={this.getRepos} /> : ""}
           {this.state.show ? <Post repos={this.state.repos} /> : ""}
         </div>

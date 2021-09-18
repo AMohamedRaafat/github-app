@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Parent , Pic,  None, Title, Button, Bio} from './UserCss';
+import { Avatar, Parent , Pic,  None, Title, Button, Bio, No} from './UserCss';
 const User = (props) => {
     const data = props.data;
     const get = props.get;
@@ -24,20 +24,20 @@ const User = (props) => {
               <a className="btn btn-outline-warning" href={data.html_url}>Profile</a>
             </div>
           </div>
-          <div className="row mt-3">
-            <None className="repos col-3 offset-1 mt-2">
+          <No className="row mt-3">
+            <None className="repos col-4 mt-2">
               <Title>Repos</Title>
               <Button onClick={get} className="btn btn-dafault">{data.public_repos}</Button>
             </None>
-            <None className="follower col-3 offset-1 mt-2">
+            <None className="follower col-4 mt-2">
               <Title>Follower</Title>
               <Button className="btn btn-dafault">{data.followers}</Button>
             </None>
-            <None className="repos col-3 offset-1 mt-2">
+            <None className="repos col-4  mt-2">
               <Title>Following</Title>
               <Button className="btn btn-dafault">{data.following}</Button>
             </None>
-          </div>
+          </No>
           <Bio className="col-12 bio mt-3">
             <p>{data.bio}</p>
           </Bio>

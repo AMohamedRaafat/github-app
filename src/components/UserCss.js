@@ -11,18 +11,15 @@ export const Pic = styled.img`
     height:300px;
     width:300px;
     border-radius:20% 50% 20% 50%;
-    transform : rotateY(35deg);
+    transform : rotateY(20deg);
 
     `
 export const No = styled.div`
-    background-color:#515677;
-    padding:15px;
     border-radius:20px;  
     height:auto;
 `
 export const None = styled(No)`
-    padding:0px;
-    background-color:#434a58;
+    padding:15px;
 `
 export const Title = styled.h6`
     padding:5px;
@@ -31,9 +28,13 @@ export const Title = styled.h6`
 `
 
 export const Button = styled.button`
+    display:block;
+    width:100%;
     color:#ccc;
+    border-radius:0 0 20px 20px;  
+
     font-size:18px;
-    background-color:transparent;
+    background-color:#364258;
     &:hover {
         color:white;
         background-color:dodgerblue;
