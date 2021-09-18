@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Item, ItemHead, ItemBody, ItemText} from './PostCss';
 const Post = (props) => {
     const repos = props.repos;
     return (
@@ -7,14 +7,13 @@ const Post = (props) => {
         <div className="row">
           {repos.map(post => {
             return (
-              <div className="card text-dark bg-warning mb-3" style={{maxWidth: "30.3rem"}} key={post.id}>
-                <div className="card-header">{post.full_name}</div>
-                <div className="card-body">
-                  <h5 className="card-title">{post.name}</h5>
-                  <p className="card-text">{post.description}</p>
-                  <a href={post.svn_url} className="btn btn-outline-secondary">Project Link</a>
-                  </div>
-              </div>
+                <Item className="col-md-4 mt-3" key={post.id}>
+                  <ItemHead><h4>{post.name}</h4></ItemHead>
+                  <ItemBody>
+                    <ItemText className="card-text">{post.description !== "" ? post.description : "No Description" }</ItemText>
+                    <a href={post.svn_url} className="btn btn-outline-warning">Project Link</a>
+                  </ItemBody>
+                </Item>
             )
 
           })}
