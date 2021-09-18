@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+}
+.Repos .row div {
+  padding: 10px 0 ;
+  height: auto;
+}
+.Repos .row div .post{
+  width: 80%;
+  padding: 10px ;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #ccc;
+}
+.user-data { 
+  margin: 10% auto;
+  
+}
+.card img {
+  display: block;
+  margin: 0 auto;
+  height: 500px;
+  width: 500px;
+}
